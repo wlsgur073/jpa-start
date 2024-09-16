@@ -214,11 +214,4 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,visualstudiocode,intellij+all,gradle,git
 /ex1-hello-jpa.iml
-/target/classes/jpabook/japshop/domain/Item.class
-/target/classes/hellojpa/JpaMain.class
-/target/classes/logback.xml
-/target/classes/jpabook/japshop/domain/Member.class
-/target/classes/jpabook/japshop/domain/Order.class
-/target/classes/jpabook/japshop/domain/OrderItem.class
-/target/classes/jpabook/japshop/domain/OrderStatus.class
-/target/classes/META-INF/persistence.xml
+/target/**
