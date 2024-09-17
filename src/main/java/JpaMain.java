@@ -1,5 +1,5 @@
-package hellojpa;
-
+import hellojpa.MappingMember;
+import hellojpa.MappingTeam;
 import jakarta.persistence.*;
 
 import java.util.List;
