@@ -14,6 +14,10 @@ public class MappingMember {
     @JoinColumn(name = "TEAM_ID")
     private MappingTeam team;
 
+    @OneToOne
+    @JoinColumn(name = "LOCEK_ID")
+    private Locker locker;
+
     public Long getId() {
         return id;
     }
