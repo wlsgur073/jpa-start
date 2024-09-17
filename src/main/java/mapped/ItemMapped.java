@@ -16,7 +16,7 @@ public abstract class ItemMapped {
 
     // TABLE_PER_CLASS 전략의 경우에는 dtype를 사용하지 않는다.
     // 그러나 비효율적이기에 해당 전략은 비추천
-    private String dtype;
+//    private String dtype;
 
     public ItemMapped() {
     }
