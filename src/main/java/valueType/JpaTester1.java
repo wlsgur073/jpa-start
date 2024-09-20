@@ -1,16 +1,11 @@
-import EmbeddedType.Address;
-import EmbeddedType.MemberEm;
-import EmbeddedType.Period;
-import hellojpa.MappingMember;
-import hellojpa.MappingTeam;
+package valueType;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-import java.util.List;
-
-public class JpaEmbedded {
+public class JpaTester1 {
 
     public static void main(String[] args) {
 

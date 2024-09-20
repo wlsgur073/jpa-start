@@ -1,4 +1,4 @@
-package EmbeddedType;
+package valueType;
 
 import jakarta.persistence.Embeddable;
 

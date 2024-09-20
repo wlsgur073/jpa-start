@@ -1,11 +1,6 @@
-package EmbeddedType;
+package valueType;
 
 import jakarta.persistence.*;
-import jpabook.japshop.domain.Order;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class MemberEm {
