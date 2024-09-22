@@ -45,4 +45,12 @@ public class Member2 {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public Team2 getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team2 team) {
+        this.team = team;
+    }
 }

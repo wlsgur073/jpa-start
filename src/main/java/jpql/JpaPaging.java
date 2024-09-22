@@ -10,7 +10,6 @@ import java.util.List;
 
 public class JpaPaging {
 
-
     public static void main(String[] args) {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -36,9 +35,11 @@ public class JpaPaging {
                     .setMaxResults(10)
                     .getResultList();
 
+
             for (Member2 m : resultList) {
                 System.out.println("member name = " + m.getUsername() + " age : " + m.getAge());
             }
+
 
             tx.commit();
         } catch (Exception e) {

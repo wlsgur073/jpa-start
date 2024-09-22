@@ -1,6 +1,7 @@
 package jpql.domain;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +14,13 @@ public class Team2 {
 
     private String name;
 
+    /*
+    * Batch Size는 글로벌 설정으로 모든 query에 적용시킬수도 있다. (persistence.xml 참고).
+    * <property name="hibernate.default_batch_fetch_size" value="100" />
+    * */
+    @BatchSize(size = 100) // LAZY 처리 중인 것에 batchSize를 줘서 청크 단위로 sql를 보낼 수 있다.
     @OneToMany(mappedBy = "team")
     private List<Member2> member2s = new ArrayList<>();
-
-    @Embedded
-    private Address2 address2;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT2_ID")
@@ -47,11 +50,4 @@ public class Team2 {
         this.member2s = member2s;
     }
 
-    public Address2 getAddress() {
-        return address2;
-    }
-
-    public void setAddress(Address2 address2) {
-        this.address2 = address2;
-    }
 }

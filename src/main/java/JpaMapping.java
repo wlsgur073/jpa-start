@@ -26,8 +26,8 @@ public class JpaMapping {
 
             em.persist(movie);
 
-            em.flush();
-            em.clear();
+//            em.flush();
+//            em.clear();
 
             Movie findMovie = em.find(Movie.class, movie.getId());
             System.out.println("findMovie = " + findMovie);

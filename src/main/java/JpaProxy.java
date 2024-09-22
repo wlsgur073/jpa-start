@@ -26,8 +26,8 @@ public class JpaProxy {
             member.changeTeam(team);
             em.persist(member);
 
-            em.flush();
-            em.clear();
+//            em.flush();
+//            em.clear();
 
             MappingMember findMember = em.find(MappingMember.class, member.getId());
 
