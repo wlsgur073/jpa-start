@@ -70,13 +70,14 @@ public class JpqlJoin {
             * - paging 처리하면 안됨. 데이터 범위가 커지기에 memory WARN 발생함.
             * */
 
+            List<Member2> resultList1 = em.createNamedQuery("Member.findByUsername", Member2.class)
+                    .setParameter("username", "회원1")
+                    .getResultList();
 
-
-            System.out.println("resultList2.size() = " + resultList2.size());
-
-            for (Team2 team : resultList2) {
-                System.out.println("member = " + team.getName() + " | " + team .getMember2s().size());
+            for (Member2 member21 : resultList1) {
+                System.out.println("member21.getUsername() = " + member21.getUsername());
             }
+
 
             tx.commit();
         } catch (Exception e) {

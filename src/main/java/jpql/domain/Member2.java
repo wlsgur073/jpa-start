@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import static jakarta.persistence.FetchType.*;
 
 @Entity
+@NamedQuery( // 어노테이션이기에 애플리케이션 로딩 시점에 query를 미리 검증해주는 장점이 있다.
+        name = "Member.findByUsername"
+        , query = "select m from Member2 m where m.username = :username"
+)
 public class Member2 {
 
     @Id
